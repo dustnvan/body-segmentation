@@ -73,6 +73,10 @@ while cap.isOpened():
             cv2.putText(frame, label, (mid_x, mid_y),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
 
+    # Display the frame in full screen
+    cv2.namedWindow("Real-time Body Segmentation", cv2.WINDOW_NORMAL)
+    cv2.setWindowProperty("Real-time Body Segmentation", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+
     # Display the frame
     cv2.imshow("Real-time Body Segmentation", frame)
 
